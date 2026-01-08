@@ -175,7 +175,7 @@ body {
 .famous-controls {
   display: flex;
   gap: 5px;
-  margin-top: 4px;
+  /* margin-top: 4px; */
   align-items: center;
 }
 
