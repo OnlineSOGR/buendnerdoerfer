@@ -492,6 +492,12 @@ body {
   height: 100px;
 }
 
+.famous-container h3 {
+  margin: 0;
+  padding: 8px 6px;
+  font-size: 14px;
+}
+
 .famous-popup .score-total {
   font-size: 20px;
 }
