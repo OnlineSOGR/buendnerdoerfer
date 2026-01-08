@@ -517,13 +517,18 @@ body {
     font-size: 9px;
     border: 2px solid #e1e8f0;
     border-radius: 10px;
+    flex: 1;
 }
 .famous-hints li {
   min-height: 40px;
 }
 
 .famous-hints {
-    gap: 3px;
+  gap: 3px;
+}
+
+.famous-btn {
+  flex: 2;
 }
 
 }
@@ -541,13 +546,3 @@ body {
   border: 2px solid #e1e8f0;
   border-radius: 10px;
 }
-
-/* .famous-btn {
-  padding: 12px;
-  font-size: 16px;
-  background: var(--accent-1);
-  color: white;
-  border-radius: 10px;
-  border: none;
-  font-weight: bold;
-} */
