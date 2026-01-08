@@ -767,15 +767,15 @@
 const dist = levenshtein(guess, answer);
 const nameParts = place.name.toLowerCase().split(" ");
 
-if (dist > 0 && dist <= 2) {
-  hintEl.textContent = "🔥 Nah dran! Überprüfe deinen Text.";
-  hintEl.className = "famous-hint hot";
+if (dist <= 2) {
+hintEl.textContent = "🔥 Nah dran! Überprüfe deinen Text.";
+hintEl.className = "famous-hint hot";
 } else if (nameParts.some(part => part.length > 2 && guess.includes(part))) {
-  hintEl.textContent = "👍 Fast! Ein Teil des Namens stimmt.";
-  hintEl.className = "famous-hint warm";
+hintEl.textContent = "👍 Fast! Ein Teil des Namens stimmt.";
+hintEl.className = "famous-hint warm";
 } else {
-  hintEl.textContent = "❄️ Nicht ganz. Lies nochmals die Hinweise.";
-  hintEl.className = "famous-hint cold";
+hintEl.textContent = "❄️ Nicht ganz. Lies nochmals die Hinweise.";
+hintEl.className = "famous-hint cold";
 }
 
 if (revealedHints < totalHints) revealedHints++;
