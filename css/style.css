@@ -520,6 +520,10 @@ body {
   height: 5px;
 }
 
+.famous-hints li {
+  min-height: 45px;
+}
+
 }
 
 .famous-controls {
