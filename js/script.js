@@ -531,7 +531,7 @@
     {
       name: "Thusis",
       image: "img/thusis.jpg",
-      hints: ["Liegt am nördlichen Eingang zur Viamala-Schlucht", "Wichtiger Verkehrsknotenpunkt am Splügen- und San Bernardino-Pass", "Austragungsort des jährlichen Viamala-Laufs", "Gehört zur Region Viamala", "Endpunkt der Albulalinie Richtung St. Moritz", "Historischer Handelsplatz"]
+      hints: ["Liegt am nördlichen Eingang zur Viamala-Schlucht", "Wichtiger Verkehrsknotenpunkt am San Bernardino-Pass", "Austragungsort des jährlichen Viamala-Laufs", "Gehört zur Region Viamala", "Endpunkt der Albulalinie Richtung St. Moritz", "Historischer Handelsplatz"]
     },
     {
       name: "Disentis",
