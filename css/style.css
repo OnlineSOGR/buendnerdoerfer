@@ -153,7 +153,7 @@ body {
 
 .famous-hints li.revealed {
   animation: fadeIn 400ms ease;
-  font-size: 14pt;
+  font-size: 10pt;
 }
 
 .famous-hints li.hidden {
