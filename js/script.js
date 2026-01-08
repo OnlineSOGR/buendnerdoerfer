@@ -767,6 +767,12 @@
 const dist = levenshtein(guess, answer);
 const nameParts = place.name.toLowerCase().split(" ");
 
+// 1. Zuerst prüfen, ob die Antwort exakt richtig ist
+if (dist === 0) {
+  endGame(true); 
+  return; // Beendet die Funktion sofort, damit kein Hinweistext erscheint
+}
+
 if (dist <= 2) {
 hintEl.textContent = "🔥 Nah dran! Überprüfe deinen Text.";
 hintEl.className = "famous-hint hot";
