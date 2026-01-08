@@ -211,7 +211,7 @@ body {
   border-radius: 6px;
   cursor: pointer;
   font-weight: 700;
-  font-size: 12px;
+  font-size: 16px;
   box-shadow: 0 4px 12px rgba(25, 118, 210, 0.2);
   transition: all 180ms ease;
   font-family: inherit;
