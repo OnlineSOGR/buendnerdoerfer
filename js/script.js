@@ -749,46 +749,46 @@
     
     if (!guess) return;
 
-    if (guess === answer) {
+    const dist = levenshtein(guess, answer);
+    const nameParts = place.name.toLowerCase().split(" ");
+
+    // 1. Zuerst prüfen, ob die Antwort exakt richtig ist
+    if (dist === 0) {
       input.classList.add("correct");
       setTimeout(() => endGame(true), 600);
-    } else {
-      triesLeft--;
-      input.classList.add("wrong");
-      setTimeout(() => input.classList.remove("wrong"), 1000);
-      hintsTitle.innerHTML = `Hinweise: <span class="tries-right">${triesLeft} Versuche</span>`;
-      if (revealedHints < totalHints) revealedHints++;
-      renderHints();
-      if (triesLeft <= 0) endGame(false);
+      return; // WICHTIG: Hier bricht die Funktion ab. Nichts darunter wird ausgeführt.
     }
 
-         // Feedback
-// Feedback Logik
-const dist = levenshtein(guess, answer);
-const nameParts = place.name.toLowerCase().split(" ");
+    // 2. Wenn die Antwort FALSCH ist:
+    triesLeft--;
+    input.classList.add("wrong");
+    setTimeout(() => input.classList.remove("wrong"), 1000);
+    hintsTitle.innerHTML = `Hinweise: <span class="tries-right">${triesLeft} Versuche</span>`;
 
-// 1. Zuerst prüfen, ob die Antwort exakt richtig ist
-if (dist === 0) {
-  endGame(true); 
-  return; // Beendet die Funktion sofort, damit kein Hinweistext erscheint
-}
+    // 3. Feedback-Texte (Hot / Warm / Cold)
+    if (dist <= 2) {
+      hintEl.textContent = "🔥 Nah dran! Überprüfe deinen Text.";
+      hintEl.className = "famous-hint hot";
+    } else if (nameParts.some(part => part.length > 2 && guess.includes(part))) {
+      hintEl.textContent = "👍 Fast! Ein Teil des Namens stimmt.";
+      hintEl.className = "famous-hint warm";
+    } else {
+      hintEl.textContent = "❄️ Nicht ganz. Lies nochmals die Hinweise.";
+      hintEl.className = "famous-hint cold";
+    }
 
-if (dist <= 2) {
-hintEl.textContent = "🔥 Nah dran! Überprüfe deinen Text.";
-hintEl.className = "famous-hint hot";
-} else if (nameParts.some(part => part.length > 2 && guess.includes(part))) {
-hintEl.textContent = "👍 Fast! Ein Teil des Namens stimmt.";
-hintEl.className = "famous-hint warm";
-} else {
-hintEl.textContent = "❄️ Nicht ganz. Lies nochmals die Hinweise.";
-hintEl.className = "famous-hint cold";
-}
+    // 4. Neuen Hinweis aufdecken
+    if (revealedHints < totalHints) {
+      revealedHints++;
+      renderHints();
+    }
 
-if (revealedHints < totalHints) revealedHints++;
-renderHints();
-if (triesLeft <= 0) endGame(false);
-}
-
+    // 5. Prüfen, ob das Spiel verloren ist
+    if (triesLeft <= 0) {
+      setTimeout(() => endGame(false), 600);
+    }
+  }
+  
   resetGame(0);
 
   input.addEventListener("input", () => {
