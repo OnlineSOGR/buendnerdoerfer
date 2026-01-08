@@ -469,7 +469,7 @@ body {
 
 @media (max-width: 420px) {
   .famous-container {
-    height: 500px;
+    height: 420px;
     width: 300px;
     margin: 12px;
     padding: 12px;
