@@ -767,13 +767,16 @@
 const dist = levenshtein(guess, answer);
 const nameParts = place.name.toLowerCase().split(" ");
 
-if (dist <= 2) {
+// Ändere die erste Bedingung auf: dist > 0 && dist <= 2
+if (dist > 0 && dist <= 2) {
   hintEl.textContent = "🔥 Nah dran! Überprüfe deinen Text.";
   hintEl.className = "famous-hint hot";
 } else if (nameParts.some(part => part.length > 2 && guess.includes(part))) {
   hintEl.textContent = "👍 Fast! Ein Teil des Namens stimmt.";
   hintEl.className = "famous-hint warm";
 } else {
+  // Diese Bedingung greift nun auch, wenn dist === 0 ist, 
+  // sofern du die Erfolgsprüfung nicht schon vorher abgefangen hast.
   hintEl.textContent = "❄️ Nicht ganz. Lies nochmals die Hinweise.";
   hintEl.className = "famous-hint cold";
 }
