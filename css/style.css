@@ -520,7 +520,7 @@ body {
     flex: 1;
 }
 .famous-hints li {
-  min-height: 40px;
+  min-height: 30px;
 }
 
 .famous-hints {
