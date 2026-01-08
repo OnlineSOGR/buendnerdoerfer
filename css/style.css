@@ -23,7 +23,7 @@ body {
 }
 
 .famous-container {
-  max-width: 420px;
+  max-width: 600px;
   min-height: 380px;
   height: auto;
   margin: 20px auto;
@@ -34,6 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   height: 600px;
+  width: 600px;
   overflow: hidden;
   font-size: 12pt;
   position: relative;
