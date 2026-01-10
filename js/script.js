@@ -496,12 +496,12 @@
     {
       name: "Chur",
       image: "img/chur.jpg",
-      hints: ["Älteste Stadt der Schweiz", "Hauptort von Graubünden", "Tor zu den Alpen", "Liegt am Alpenrhein", "Besitzt eine autofreie Altstadt", "Wahrzeichen ist die Kathedrale St. Mariä Himmelfahrt"]
+      hints: ["Älteste Stadt der Schweiz", "Hauptort von Graubünden", "Tor zu den Alpen", "Liegt am Alpenrhein", "Besitzt eine autofreie Altstadt", " Ein Wahrzeichen ist die Martinskirche"]
     },
     {
       name: "St. Moritz",
       image: "img/stmoritz.jpg",
-      hints: ["Weltbekannter Kurort im Engadin", "Gastgeber von zwei Olympischen Winterspielen", "Liegt an einem See auf 1856 m ü. M.", "Bekannt für das 'Champagner-Klima'", "Hausberg ist die Corviglia", "Berühmt für Luxushotels und Jetset"]
+      hints: ["Weltbekannter Kurort im Engadin", "Gastgeber von zwei Olympischen Winterspielen", "Liegt an einem See auf 1856 m ü. M.", "Gemeindepräsident: Christian Jott Jenny", "Hausberg ist die Corviglia", "Berühmt für Luxushotels und Jetset"]
     },
     {
       name: "Davos",
@@ -511,7 +511,7 @@
     {
       name: "Arosa",
       image: "img/arosa.jpg",
-      hints: ["Liegt am Ende des Schanfigger Tales", "Seit 2014 mit der Lenzerheide verbunden", "Bekannt für das Bärenland", "Slogan: 'Arosa Geniessen'", "Beliebtes Ziel für das Humorfestival", "Eichhörnchenweg ist eine Attraktion"]
+      hints: ["Liegt am Ende des Schanfigger Tales", "Seit 2014 mit der Lenzerheide verbunden", "Bekannt für das Bärenland", "Höchster Punkt: Aroser Rothorn", "Beliebtes Ziel für das Humorfestival", "Postleitzahl: 7050"]
     },
     {
       name: "Flims",
